@@ -4,7 +4,7 @@ Visit the SWEETVIZ_REPORT.html for insights on missing values.
 
 Further description on the attributes is as follows :
 
-**'isbn_13'** : ISBN 13 of the book
+**'isbn_13'** : ISBN 13 of the book\n
 **'isbn_10'** : ISBN 10 of the book
 **'book_title'** 
 **'authors'**    : 'list' containing names of authors of the book
