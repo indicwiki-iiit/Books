@@ -30,7 +30,7 @@ Further description on the attributes is as follows :
 **'author1_name'** : Name of the **first** author, added just for better accessibility to directly print in the author's section of the article  
 **'author1_image'** : 'string' (or) 'list' of 'strings' in which each string can directly be used in the template to get a photo with that name from Wikimedia Commons  
 **'author1_nationality'** : Country the author belongs to  
-**'author1_education'** : Last place of study of the author  
+**'author1_education'** : Last place of study of the author (or) 'list' containing institutes the author went to  
 **'author1_awards_received'** : 'list' of strings in which each string is an award received by the author  
 **'author1_notable_works'** : 'list' of strings in which each string is a notable work of the author  
 **'author1_genre'** : 'list' of strings in which each string is a genre the author has worked on  
