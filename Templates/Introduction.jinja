@@ -1,0 +1,64 @@
+{%- macro introduction() -%}
+    {{ "\n==పరిచయం==\n"}}
+        {% if book_title -%}
+            {%- set line1A = [book_title,' అను పుస్తకం ']|join('') -%}
+            {%- set line1B = [book_title,' అనే పేరుగల పుస్తకం ']|join('') -%}
+            {{-[ line1A, line1B ]|random-}}
+        {%- endif -%}
+
+        {%- if published_date -%}
+            {%- if published_date|length == 4 -%}
+                                {{- '{} లో విడుదల అయింది. '.format(published_date) -}}
+            {%- else -%}
+                                {{- '{} నాడు విడుదల అయింది.  '.format(published_date) -}}
+            {%- endif -%}
+        {%- endif -%}
+
+        {%- if authors -%}
+            {%- set authors_string = authors|join(', ') -%}
+            {%- set line3A = ['దీనిని ',authors_string,' రచించారు. ']|join('') -%}
+            {%- set line3B = ['ఈ పుస్తకం ',authors_string,' చే రచింపబడింది. ']|join('') -%}
+            {{- [ line3A, line3B ]|random -}}
+        {%- endif -%}
+        
+        {%- if publisher -%}    
+            {%- set line4A = [publisher,' అనే సంస్థ ఈ పుస్తకాన్ని ప్రచురించింది. ']|join('') -%}
+            {%- set line4B = [publisher,' అనే సంస్థ ఈ పుస్తకాన్ని ప్రచురించే కర్తవ్యాన్ని నిర్వర్తించింది. ']|join('') -%}
+            {{- [ line4A, line4B ]|random -}}
+        {%- endif -%}
+
+        {%- if language -%}
+            {%- set line5A = ['ఈ పుస్తకం ', language ,' భాషలో ప్రచురింపబడినది. ']|join('') -%}
+            {%- set line5B = ['రచయితలు ఈ పుస్తకాన్ని ', language ,' భాషలో రచించారు. ']|join('') -%}
+            {{- [ line5A, line5B ]|random -}}
+        {%- endif -%}
+        
+        {%- if categories -%}
+            {%- set line6A = [categories, ' సాహిత్య శైలి లో ఈ పుస్తకం వ్రాయబడినది. ']|join('') -%}
+            {%- set line6B = [categories, ' సాహిత్య శైలి లోని అనేక అంశాలు ఈ పుస్తకం లో కొట్టొచ్చినట్లు కనిపిస్తాయి. ']|join('') -%}
+            {{- [ line6A, line6B ]|random -}}
+        {%- endif -%}
+        
+        {%- if maturity_rating -%}
+            {%- set line7A  = ['ఈ పుస్తకానికి ' ,maturity_rating,' రేటింగ్ ఇవ్వబడినది. ']|join('')-%}
+            {%- set line7B  = ['సాంఘిక ప్రమాణాల దృష్ఠ్య ఈ పుస్తకానికి ',maturity_rating,' వ రేటింగ్ కేటాయించబడినది. ']|join('') -%}
+        {%- endif -%}
+        
+        {%- if subtitle -%}
+            {%- set auxLine1 = [' (ఉప శీర్షిక: ' ,subtitle,' ) ']|join('')-%}
+            {{-auxLine1-}}
+        {%- endif -%}
+
+        
+        {%- if description -%}
+            {%- set auxLine2 = [description,' అనేది ఈ పుస్తక నేపథ్యమును సంగ్రహ పరుస్తుంది. ']|join('')-%}
+            {{- auxLine2 -}}
+        {%- endif -%}
+
+        {{- [ line7A, line7B ]|random -}}
+        {{- '\n' -}}
+
+{%- endmacro -%}
+
+{#- Function call below -#}
+{{- introduction() -}}

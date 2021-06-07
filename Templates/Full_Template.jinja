@@ -1,0 +1,425 @@
+{%- macro infobox() -%}
+	{{- "{{infobox" -}}
+	{{- '\n' -}}
+	{{- '| title = {}'.format(book_title) -}}
+	{{- '\n' -}}
+	{%- if authors -%}
+	    {{- '| header2 = ' -}}
+	    {{- '\n' -}}
+	    {{- "| label2 = {}".format('Author') -}}
+	    {{- '\n' -}}
+	    {{- "| data2 = {}".format(authors[0]) -}}
+	    {{- '\n' -}}
+	{%- endif -%}
+	
+	{%- if book_title -%}
+	    {{- '| header3 = ' -}}
+	    {{- '\n' -}}
+	    {{- "| label3 = {}".format('Original title') -}}
+	    {{- '\n' -}}
+	    {{- "| data3 = {}".format(book_title) -}}
+	    {{- '\n' -}}
+	{%- endif -%}
+	
+	{%- if subtitle -%}
+	    {{- '| header4 = ' -}}
+	    {{- '\n' -}}
+	    {{- "| label4 = {}".format('Subtitle') -}}
+	    {{- '\n' -}}
+	    {{- "| data4 = {}".format(subtitle) -}}
+	    {{- '\n' -}}
+	{%- endif -%}
+	
+	{%- if language -%}
+	    {{- '| header5 = ' -}}
+	    {{- '\n' -}}
+	    {{- "| label5 = {}".format('Language') -}}
+	    {{- '\n' -}}
+	    {{- "| data5 = {}".format(language) -}}
+	    {{- '\n' -}}
+	{%- endif -%}
+	
+	{%- if categories -%}
+	    {{- '| header6 = ' -}}
+	    {{- '\n' -}}
+	    {{- "| label6 = {}".format('Genre') -}}
+	    {{- '\n' -}}
+	    {{- "| data6 = {}".format(categories) -}}
+	    {{- '\n' -}}
+	{%- endif -%}
+	
+	{%- if publisher -%}
+	    {{- '| header7 = ' -}}
+	    {{- '\n' -}}
+	    {{- "| label7 = {}".format('Publisher') -}}
+	    {{- '\n' -}}
+	    {{- "| data7 = {}".format(publisher) -}}
+	    {{- '\n' -}}
+	{%- endif -%}
+	
+	{%- if published_date -%}
+	    {{- '| header8 = ' -}}
+	    {{- '\n' -}}
+	    {{- "| label8 = {}".format('Publication date') -}}
+	    {{- '\n' -}}
+	    {{- "| data8 = {}".format(published_date) -}}
+	    {{- '\n' -}}
+	{%- endif -%}
+	
+	{%- if page_count -%}
+	    {{- '| header9 = ' -}}
+	    {{- '\n' -}}
+	    {{- "| label9 = {}".format('Pages') -}}
+	    {{- '\n' -}}
+	    {{- "| data9 = {}".format(page_count) -}}
+	    {{- '\n' -}}
+	{%- endif -%}
+	
+	{%- if Dimensions -%}
+	    {{- '| header10 = ' -}}
+	    {{- '\n' -}}
+	    {{- "| label10 = {}".format('Dimensions') -}}
+	    {{- '\n' -}}
+	    {{- "| data10 = {}".format(Dimensions) -}}
+	    {{- '\n' -}}
+	{%- endif -%}
+	
+	{%- if isbn_13 -%}
+	    {{- '| header11 = ' -}}
+	    {{- '\n' -}}
+	    {{- "| label11 = {}".format('ISBN-13') -}}
+	    {{- '\n' -}}
+	    {{- "| data11 = {}".format(isbn_13) -}}
+	    {{- '\n' -}}
+	{%- endif -%}
+	
+	{%- if isbn_10 -%}
+	    {{- '| header12 = ' -}}
+	    {{- '\n' -}}
+	    {{- "| label12 = {}".format('ISBN-10') -}}
+	    {{- '\n' -}}
+	    {{- "| data12 = {}".format(isbn_10) -}}
+	    {{- '\n' -}}
+	{%- endif -%}
+	
+	{%- if worldcat_oclc_number -%}
+	    {{- '| header13 = ' -}}
+	    {{- '\n' -}}
+	    {{- "| label13 = {}".format('OCLC') -}}
+	    {{- '\n' -}}
+	    {{- "| data13 = {}".format(worldcat_oclc_number) -}}
+	    {{- '\n' -}}
+	{%- endif -%}
+	
+	{{- '}}' -}}
+	{{- '\n' }}
+{%- endmacro -%}
+
+{%- macro introduction() -%}
+    {{ "\n==పరిచయం==\n"}}
+        {% if book_title -%}
+            {%- set line1A = [book_title,' అను పుస్తకం ']|join('') -%}
+            {%- set line1B = [book_title,' అనే పేరుగల పుస్తకం ']|join('') -%}
+            {{-[ line1A, line1B ]|random-}}
+        {%- endif -%}
+
+        {%- if published_date -%}
+            {%- if published_date|length == 4 -%}
+                                {{- '{} లో విడుదల అయింది. '.format(published_date) -}}
+            {%- else -%}
+                                {{- '{} నాడు విడుదల అయింది.  '.format(published_date) -}}
+            {%- endif -%}
+        {%- endif -%}
+
+        {%- if authors -%}
+            {%- set authors_string = authors|join(', ') -%}
+            {%- set line3A = ['దీనిని ',authors_string,' రచించారు. ']|join('') -%}
+            {%- set line3B = ['ఈ పుస్తకం ',authors_string,' చే రచింపబడింది. ']|join('') -%}
+            {{- [ line3A, line3B ]|random -}}
+        {%- endif -%}
+        
+        {%- if publisher -%}    
+            {%- set line4A = [publisher,' అనే సంస్థ ఈ పుస్తకాన్ని ప్రచురించింది. ']|join('') -%}
+            {%- set line4B = [publisher,' అనే సంస్థ ఈ పుస్తకాన్ని ప్రచురించే కర్తవ్యాన్ని నిర్వర్తించింది. ']|join('') -%}
+            {{- [ line4A, line4B ]|random -}}
+        {%- endif -%}
+
+        {%- if language -%}
+            {%- set line5A = ['ఈ పుస్తకం ', language ,' భాషలో ప్రచురింపబడినది. ']|join('') -%}
+            {%- set line5B = ['రచయితలు ఈ పుస్తకాన్ని ', language ,' భాషలో రచించారు. ']|join('') -%}
+            {{- [ line5A, line5B ]|random -}}
+        {%- endif -%}
+        
+        {%- if categories -%}
+            {%- set line6A = [categories, ' సాహిత్య శైలి లో ఈ పుస్తకం వ్రాయబడినది. ']|join('') -%}
+            {%- set line6B = [categories, ' సాహిత్య శైలి లోని అనేక అంశాలు ఈ పుస్తకం లో కొట్టొచ్చినట్లు కనిపిస్తాయి. ']|join('') -%}
+            {{- [ line6A, line6B ]|random -}}
+        {%- endif -%}
+        
+        {%- if maturity_rating -%}
+            {%- set line7A  = ['ఈ పుస్తకానికి ' ,maturity_rating,' రేటింగ్ ఇవ్వబడినది. ']|join('')-%}
+            {%- set line7B  = ['సాంఘిక ప్రమాణాల దృష్ఠ్య ఈ పుస్తకానికి ',maturity_rating,' వ రేటింగ్ కేటాయించబడినది. ']|join('') -%}
+        {%- endif -%}
+        
+        {%- if subtitle -%}
+            {%- set auxLine1 = [' (ఉప శీర్షిక: ' ,subtitle,' ) ']|join('')-%}
+            {{-auxLine1-}}
+        {%- endif -%}
+
+        
+        {%- if description -%}
+            {%- set auxLine2 = [description,' అనేది ఈ పుస్తక నేపథ్యమును సంగ్రహ పరుస్తుంది. ']|join('')-%}
+            {{- auxLine2 -}}
+        {%- endif -%}
+
+        {{- [ line7A, line7B ]|random -}}
+        {{- '\n' -}}
+
+{%- endmacro -%}
+
+{%- macro summary() -%}
+    {%- if librarything_book_summary or librarything_characters -%}
+                {{- '==సారాంశం==' -}}
+        {{- '\n' -}}
+        {%- if librarything_book_summary -%}
+                    {{- "===ఈ పుస్తకం సారాంశం===" -}}
+            {{- '\n' -}}
+            {{- ':{}'.format(librarything_book_summary) -}}
+            {{- '\n' -}}
+        {%- endif -%}
+        {%- if librarything_characters -%}
+                    {{- "===పాత్రలు===" -}}
+            {{- '\n' -}} 
+            {%- for i in librarything_characters -%}
+                {{- '* {}'.format(i) -}}
+                {{- '\n' -}}
+            {%- endfor -%}
+        {%- endif -%}
+    {%- endif -%}
+{%- endmacro -%}
+
+{%- macro about_the_author() -%}
+        {{- "==ముఖ్య రచయిత గురించి==" -}}
+    {{- '\n' -}}
+    {%- if author1_name and author1_nationality -%}  
+        {%- set line1A = [author1_name,' అనే రచయిత ',author1_nationality,' దేశానికి చెందిన వారు.'] |join('')-%}
+        {%- set line1B = ['రచయితల రంగం లో ఎంతో సుప్రసిద్ధమైన ',author1_name,' ',author1_nationality,' దేశ వాస్తవ్యులు.'  ]|join('')-%}
+        {{-[line1A, line1B] | random-}}
+    {%- endif -%}
+
+    {%- if author1_education -%}
+        {%- set line2A = ['అతను/ఆమె '  ,author1_education,' లో విద్యాభ్యాసం పూర్తి చేశారు. '] |join('')-%}
+        {%- set line2B = ['అతను/ఆమె '  ,author1_education,' లో చదువుకున్నారు . '] |join('')-%}
+        {{-[ line2A, line2B ] | random-}}
+    {%-endif-%}
+
+    {%- if author1_stats and author1_library_holdings -%}
+        {%- set line3A = [author1_stats, ' రచించిన అతని పేరిట ',author1_library_holdings,' కలవు.'] |join('')-%}
+        {{-line3A-}}
+    {%-endif-%}
+
+    {%- if author1_genre -%}
+        {%- set genrelis = author1_genre|join(', ')-%}
+        {%- set line4A =  [author1_name,' ',genrelis, ' సాహిత్య శైలి లోని పుస్తకాలకు రచయితగా కీర్తికెక్కారు.'] |join('')-%}
+        {{- line4A -}}
+    {%- endif -%}
+    
+    {%- if author1_notable_works -%}
+        {%- set notablelis = author1_notable_works|join(', ')-%}
+        {%- set line5A =  ['అతను/ఆమె చేసిన ఎన్నో రచనలలో ', notablelis ,'ప్రఖ్యాతి చెందినవి.'] |join('')-%}
+        {{-line5A-}}
+    {%- endif -%}
+
+    {%- if author1_awards_received -%}
+        {%- set awardslis = author1_awards_received|join(', ')-%}
+        {%- set line6A =  ['అతనిని/ఆమెని ఎన్నో పురస్కారాలు వరించాయి.  వాటిలో కొన్ని', awardslis,' .' ] |join('')-%}
+        {{- line6A -}}
+    {%- endif -%}
+    {{- '\n' -}}
+{%- endmacro -%}
+
+{%- macro ratingsReceived() -%}
+        {{- "==రేటింగ్స్==" -}}
+    {{- '\n' -}}
+        {{-'ఈ పుస్తకాన్ని ఎంతో మంది చదివి ఆదరించారు. అమెజాన్, గుడ్ రీడ్స్ వంటి అనేక వెబ్సైట్లలో ఈ పుస్తకానికి లభించిన ఆదరణాభిమానాల గణాంకాలు క్రింద వివరించబడినవి. '-}}
+    {{- '\n' -}}
+    {%- if amazon_ratings_count and amazon_rating -%}
+                {{- "* '''అమెజాన్''' వెబ్సైటు లో {} మంది ఈ పుస్తకాన్ని చదివి సగటుగా {} స్టార్స్ రేటింగ్ ను ఇచ్చారు ".format(amazon_ratings_count, amazon_rating) -}}
+        {{- '\n' -}}
+    {%- endif -%}
+    
+    {%- if ratings_count and average_rating -%}
+                {{- "* '''గూగుల్ బుక్స్''' లో {} మంది ఈ పుస్తకాన్ని చదివి సగటుగా {} స్టార్స్ రేటింగ్ ను ఇచ్చారు ".format(ratings_count, average_rating) -}}
+        {{- '\n' -}}
+    {%- endif -%}
+    
+    {%- if goodreads_ratings_count and goodreads_rating -%}
+                {{- "* '''గుడ్ రీడ్స్''' అనే వెబ్సైటు {} పాఠకుల అభిప్రాయాలను సేకరించి ఈ పుస్తకానికి సగటు గా {} రేటింగ్ ను ఇచ్చింది.  ".format(goodreads_ratings_count, goodreads_rating) -}}
+        {{- '\n' -}}
+    {%- endif -%}
+    
+    {%- if librarything_reviews and librarything_avg_rating -%}
+                {{- "* ఈ పుస్తకాన్ని '''లైబ్రరీథింగ్''' నుండి చదివి సమీక్ష ఇచ్చిన వారి సంఖ్య {} వారి అభిప్రాయాన్ని తెలియ చేస్తూ సగటున {} స్టార్స్ రేటింగ్ ను ఇచ్చారు ".format(librarything_reviews, librarything_avg_rating) -}}
+        {{- '\n' -}}
+    {%- endif -%}
+    
+    {%- if Best_Sellers_rank -%}
+            {{- "ఈ పుస్తకాన్ని '''అమెజాన్''' వెబ్‌సైట్ కొనుగోళ్ల  ఆధారంగా బెస్ట్ సెల్లర్స్ ర్యాంక్ అనే ర్యాంక్ ని కేటాయించింది. ఈ వివరాలు క్రింద ఇవ్వబడ్డాయి: "  -}}
+        {{- '\n' -}}
+        {%- for i in Best_Sellers_rank -%}
+            {{- '* {}'.format(i) -}}
+            {{- '\n' -}}
+        {%- endfor -%}
+    {%- endif -%}
+{%- endmacro -%}
+
+{%- macro awards() -%}
+	{%- if awards_list -%}
+                {{- "==పురస్కారాలు==" -}}
+        {{- '\n' -}}
+        {%- set line1A = ['ఈ పుస్తకం ఎన్నో పురస్కారాలను గెలుచుకుంది. ']|join('') -%}
+        {%- set line1B = ['ఈ పుస్తకం ఎన్నో అవార్డులతో సన్మానించబడింది. ']|join('') -%}
+        {{- [ line1A, line1B ]|random -}}
+        {%- set line2A  = ' వాటిలో కొన్ని ప్రాముఖ్యత చెందిన పురస్కారాలు: '-%}
+        {%- set line2B  = ' వాటన్నింటిలో కొన్ని ముఖ్యమైనవి:  ' -%}
+        {{- [ line2A, line2B ]|random -}}
+        {{- '\n' -}}
+        {%- for i in awards_list -%}
+            {{- "* {}".format(i) -}}
+            {{- '\n' -}}
+        {%- endfor -%}
+
+    {%- else -%}
+                {{- 'ఈ పుస్తకం చేజిక్కించుకున్న అవార్డుల జాబితాకు సంబంధించిన డేటా అందుబాటులో లేకపోవడం వలన వాటిని ఈ వ్యాసంలో విశ్లేషించలేకపోయాము.' -}}
+    {%- endif -%}
+{%- endmacro -%}
+
+
+{%- macro display_heading() -%}
+{{-  "==ప్రచురిత పుస్తక వివరాలు, లభ్యత==" -}}
+{{- '\n' -}}
+{%- endmacro -%}
+{%- macro Book_Editions() -%}
+    {%- if book_editions -%}
+                {{- "===వెలువడిన సంచికలు===" -}}
+        {{- '\n' -}}
+                {{- "ఈ పుస్తకం పలు సంచికలలో ప్రచురించబడినది. వాటిలో కొన్ని క్రింద ప్రస్తావించబడినవి. <ref name='google-books-site'>{{{{cite web |url=https://www.google.co.in/books/edition/_/{} |title=గూగుల్ బుక్స్ |quote=పుస్తక శీర్షిక, రచయిత, ఐ ఎస్ బీ ఎన్ (isbn) సంఖ్య, భాష, శైలి, ప్రచురణకర్త ఇతర ప్రచురణలు, సంచిక వివరాలు, ఇతర ప్రాథమిక వివరాలు గూగుల్ బుక్స్ వెబ్ సైట్ నుంచి సేకరించబడ్డాయి. }}}}</ref>".format(google_books_id) -}}
+        {{- '\n' -}} 
+        {{- '{| class="wikitable"' -}}
+        {{- '\n' -}}
+                {{- '|+ పుస్తక సంచికలు' -}}
+        {{- '\n' -}}
+        {{- '|-' -}}
+        {{- '\n' -}}
+                {{- '! ఐఎస్ బీ ఎన్ సంఖ్య || ప్రచురణకర్త || ఆకృతి || ప్రచురించిన సంవత్సరం/తేదీ || పేజీ లెక్కింపు' -}}
+        {{- '\n' -}}
+        {{- '|-' -}}
+        {{- '\n' -}} 
+        {%- for i in book_editions -%}
+            {{- "| {} || {} || {} || {} || {}".format(i[0], i[2], formats_in_telugu[i[1]], i[3], i[4]) -}}
+            {{- '\n' -}}
+            {{- "|-" -}}
+            {{- '\n' -}} 
+        {%- endfor -%}
+        {{- '|}'-}}
+        {{- '\n' -}} 
+    {%- endif -%}
+    
+{%- endmacro -%}
+
+{%- macro franchise_series() -%}
+    {%- if book_series -%}
+                {{-  "===పుస్తక శ్రేణి===" -}}    
+        {{- '\n' -}}
+                {{- 'ఈ పుస్తకం మరిన్ని పుస్తకాలతో ఒక శ్రేణిలో భాగంగా ప్రచురితమయ్యింది. అదే శ్రేణి లో విడుదల అయిన ఇతర పుస్తకాల పేర్లు క్రింద కలవు.<ref name="google-books-site"></ref> ' -}}
+        {{- '\n' -}}  
+        {%- for i in range(book_series|length) -%}
+            {{- '# {}'.format(book_series[i]) -}}
+            {{- '\n' -}}  
+        {%- endfor -%} 
+    {%- endif -%}
+    {{- '\n' -}} 
+{%- endmacro -%}
+
+{%- macro availability_on_sites() -%}
+{{-  "===పుస్తక లభ్యత===" -}}
+{{- '\n' -}}
+    {#- EBOOK, EPUB and PDF availability on Google books -#}
+    {%- if ebook_availability_on_google_books == True -%}
+                {{-  'ఈ పుస్తకం "గూగుల్ బుక్స్" అనే వెబ్సైట్ లో, ఈబుక్(ebook) రూపంలో లభిస్తుంది. ' -}}
+        {%- if epub_availability_on_google_books == True -%}
+                        {{- 'ఇదే వెబ్సైట్ లో, పాఠకులు దీన్ని ఈపబ్(epub) రూపంలో కూడా చదవగలరు. ' -}}
+        {%- endif -%}
+        
+        {%- if pdf_availability_on_google_books == True -%}
+                        {{- 'ఈ పుస్తకం "గూగుల్ బుక్స్" వెబ్సైట్ లో, పీడీఎఫ్(pdf) రూపంలో కూడా అందుబాటులో ఉన్నది. ' -}}
+        {%- endif -%}
+    {%- elif epub_availability_on_google_books == True -%}
+                {{- 'ఈ పుస్తకం "గూగుల్ బుక్స్" అనే వెబ్సైట్ లో, ఈపబ్(epub) రూపంలో లభిస్తుంది. ' -}}
+        {%- if pdf_availability_on_google_books == True -%}
+                        {{- 'ఈ పుస్తకం "గూగుల్ బుక్స్" వెబ్సైట్ లో, పీడీఎఫ్(pdf) రూపంలో కూడా అందుబాటులో ఉన్నది. ' -}}
+        {%- endif -%}
+    {%- elif pdf_availability_on_google_books == True -%}
+                {{- 'ఈ పుస్తకం "గూగుల్ బుక్స్" అనే వెబ్సైట్ లో, పీడీఎఫ్(pdf) రూపంలో లభిస్తుంది. ' -}}
+    {%- endif -%}
+    
+    {#- Preview link -#}
+    {%- if preview_link != "" -%}
+                {{- 'ఈ పుస్తకంలోని ఒక స్వల్ప సంచికను మీరు ఈ లింక్ [{} గూగుల్ బుక్స్ ప్రివ్యూ లింక్] ద్వారా చూడగలరు. '.format(preview_link) -}}
+    {%- endif -%}
+    {{- '\n\n' -}}
+    
+    {#- Audiobook and Kindle -#}
+    {%- if 'Audible Audiobook' in formats_and_links -%}
+                {{- 'పాఠకులు ఈ పుస్తకాన్ని చదవడమే కాకుండా [{} అమెజాన్ ఆడిబుల్ ఆడియోబుక్ లింక్] ద్వారా ఆడియో రూపంలో వినగలరు. '.format(formats_and_links['Audible Audiobook']) -}}
+    {%- endif -%}
+    {%- if 'Kindle' in formats_and_links -%}
+                {{- 'అమెజాన్ కిండిల్ అనే యాప్ లో [{} అమెజాన్ కిండెల్ లింక్] ద్వారా ఇంకా సులువుగా చదవగలరు. '.format(formats_and_links['Kindle']) -}}
+    {%- endif -%}
+    {{- '\n\n' -}}
+    
+    {#- Other sites -#}
+    {%- if formats_and_links != "" -%}
+                {{-  'ఈ పుస్తకం గురించి అదనపు  వివరాలు అందించే మూలాలు - ' -}}
+        {{- '\n' -}}
+                {{-  '*అమెజాన్ వెబ్‌సైట్ నుండి సేకరించిన పుస్తకం యొక్క వివిధ ఆకృతులు, వాటి లింక్‌లు క్రింద ఇవ్వబడ్డాయి: ' -}}
+        {{- '\n' -}}
+        {%- for i in formats_and_links -%}
+            {{- '** {}: [{} అమెజాన్ {} లింక్]'.format(formats_in_telugu[i], formats_and_links[i], formats_in_telugu[i]) -}}
+            {{- '\n' -}}
+        {%- endfor -%}
+    {%- endif -%}
+    {{- '\n' -}}
+    
+    {#- Worldcat link -#}
+    {%- if worldcat_url != "" -%}
+                {{-  '* ప్రపంచంలో ఉన్న వివిధ గ్రంథాలయాలలో ఈ పుస్తకం లభ్యతను తెలియజేసే లింక్ - [{} వరల్డ్ కాట్ వెబ్సైట్ లింక్]'.format(worldcat_url) -}}
+        {{- '\n' -}}
+    {%- endif -%}
+    
+    {#- Free resources link -#}
+    {%- if univ_link != "" -%}
+                {{-  '* ఇతర మూలాల నుంచి సేకరించబడిన ఉచిత/చౌక  ప్రత్యామ్నాయాలు [{} ఓపెన్లైబ్రరీ ] వెబ్సైట్ లో పొందగలరు. '.format(univ_link) -}}
+        {{- '\n' -}}
+    {%- endif -%}
+{%- endmacro -%}
+
+{%- macro References() -%}
+        {{ '==మూలాలు==' }}
+    {{- '\n' -}}
+    {{- "{{Reflist}}" -}}
+    
+{%- endmacro -%}
+
+{#- Function calls below -#}
+{{- infobox() -}}
+{{- introduction() -}}
+{{- summary() -}}
+{{- about_the_author() -}}
+{{- ratingsReceived() -}}
+{{- awards() -}}
+{{- display_heading() -}}
+{{- Book_Editions() -}}
+{{- franchise_series() -}}
+{{- availability_on_sites() -}}
+{{- References() -}}

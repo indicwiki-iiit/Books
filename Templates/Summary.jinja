@@ -1,0 +1,23 @@
+{%- macro summary() -%}
+    {%- if librarything_book_summary or librarything_characters -%}
+                {{- '==సారాంశం==' -}}
+        {{- '\n' -}}
+        {%- if librarything_book_summary -%}
+                    {{- "===ఈ పుస్తకం సారాంశం===" -}}
+            {{- '\n' -}}
+            {{- ':{}'.format(librarything_book_summary) -}}
+            {{- '\n' -}}
+        {%- endif -%}
+        {%- if librarything_characters -%}
+                    {{- "===ఈ పుస్తకం లో కనిపించే పాత్రలు===" -}}
+            {{- '\n' -}} 
+            {%- for i in librarything_characters -%}
+                {{- '* {}'.format(i) -}}
+                {{- '\n' -}}
+            {%- endfor -%}
+        {%- endif -%}
+    {%- endif -%}
+{%- endmacro -%}
+
+{#- Function call below -#}
+{{- summary() -}}
