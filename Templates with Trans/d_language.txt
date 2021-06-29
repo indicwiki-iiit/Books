@@ -1,1 +1,0 @@
-{'Latin': 'లాటిన్', 'Spanish': 'స్పానిష్', 'French': 'ఫ్రెంచ్', 'Danish': 'డానిష్', 'Russian': 'రష్యన్', 'Italian': 'ఇటాలియన్', 'English': 'ఆంగ్ల', 'Korean': 'కొరియన్'}        

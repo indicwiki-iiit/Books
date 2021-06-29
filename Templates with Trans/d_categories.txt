@@ -1,3 +1,0 @@
-{'History': 'చరిత్ర', 'Poetry': 'కవిత్వం', 'Health and Fitness': 'ఆరోగ్యం మరియు ఫిట్నెస్', 'Drama': 'నాటకం', 'Social Commentary': 'సామాజిక వ్యాఖ్యానం', 'Mythology': 'పురాణం', 'P
-sychology': 'సైకాలజీ', 'Fiction': 'ఫిక్షన్', 'Biography': 'జీవిత చరిత్ర', 'Literature': 'సాహిత్యం', 'Contemporary': 'సమకాలీనం', 'Crime/Thriller': 'క్రైమ్ / థ్రిల్లర్', 'Religion'
-: 'ధర్మం/మతం'}
