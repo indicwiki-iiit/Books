@@ -1,4 +1,6 @@
-Read thorugh this box for a description on the dataset we've used in this project.
+## Dataset Description
+
+Read thorugh this box for a description on the dataset we've used in this project. <br /> 
 The dataset contains values corresponding to attributes in English, and also in their translated/transliterated Telugu versions.
 
 Rows x Columns Stats of the Dataset   : 6500 x 79 <br /> 
