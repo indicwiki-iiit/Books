@@ -42,5 +42,10 @@ This is the Sample Article, the reference file we've made for ourselves to const
 ### 🗎 Books - Report. pdf
 Read this comprehensive report on this project to know more about the technical facets of this project, tools used to overcome issues encountered, some factual details, and a lot more.
 
+### 📜 render.py
+Use this file if you'd like to try rendering one article. Note that this should be run only after the entire repo is cloned/downloaded, since this script needs access to the template and dataset lodged in other folders.
+
+### 📜 genXML.py
+Use this file if you'd like to generate the XML file comprising of records from all 6500 books in the database, enclosed within mediawiki tags. Note that this should be run only after the entire repo is cloned/downloaded, since this script needs access to the template and dataset lodged in other folders.
 
 
