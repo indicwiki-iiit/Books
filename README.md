@@ -2,7 +2,7 @@
 
 Welcome to the repository of "Books"! Follow the guide below if you'd like to navigate across this repository and view files, or if you'd like to implement specific chunks of this project on your computer.
 
-You may also check this detailed **report** on the Tewiki Books project [here](https://docs.google.com/document/d/17Ll3s4RTa1K25-0ShrDKe0_9z2Ct19g9zegw5jVCeR8/edit) to know how to navigate through all the files listed here, and to know the multiple technical and other facets of this project.
+You may also check this detailed **report** on the Tewiki Books project [here](https://github.com/indicwiki-iiit/Books/blob/new/Books%20-%20Report.pdf) to know how to navigate through all the files listed here, and to know the multiple technical and other facets of this project.
 
 ## Guide to using these files/implementing/testing
 
@@ -13,7 +13,7 @@ You may also check this detailed **report** on the Tewiki Books project [here](h
 
 If you'd like to know more about the scripts used to construct the database and the template, visit the [raw_files](https://github.com/indicwiki-iiit/Books/tree/new/raw_files) folder. 
 
-To know what the rendered article would look like, before you render it, check out the "Books - Sample Article.pdf" file or [this](https://docs.google.com/document/d/16mtybtghFeYmJuM5s45zDpUVRAGWlzfq7dkQur6BZlI/edit#) document.
+To know what the rendered article would look like, before you render it, check out the "Books - Sample Article.pdf" file or [this](https://github.com/indicwiki-iiit/Books/blob/new/Books%20-%20Sample%20Article.pdf) document.
 
 ## Navigational Guide
 
