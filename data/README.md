@@ -13,11 +13,11 @@ Number of Columns with Telugu values  : 23 <br />
 ### 🗎 Dataset
 The dataset we've used in this project - "**FINAL-KB.csv**".
 
-### 🗎 Translated, Transliterated Attributes 
-To view a list of all the attributes listed in our dataset and how their Telugu versions have been obtained, please refer to the "**Data - TL/TR Attributes**" PDF file in this folder, or an updated version of the same via [this](https://docs.google.com/document/d/1ShzYVrSgmkvICiYevx8gl2SFb0OIX10ivYOjxXugc-I/edit#) link.
+### 🗎 Stats, books_stats.xlsx
+The file **books_stats.xlsx** comprises of the following statistics/details of the data we've used, i.e. FINAL-KB.csv. The details are as follows - 
+* Sheet1 : A list of the attributes used in each section of the article, and a brief description of the section.
+* Sheet2 : A list of the attributes which had to be translated, transliterated and had to be used unchanged.
+* Sheet3 : Byte, Character and Word Count of each book ( calculated on the basis of the number of words generated when the template of a book is rendered to Wikipedia )
 
-### 🗎 Byte Count Associated with the Articles Generated 
-To view some stats on the word and byte count rendered by each book from its attributes, visit the "**Data - Byte Count Stats**" excel sheet in this folder, or via [this](https://docs.google.com/spreadsheets/d/1fRusmVxz03TrwrpqccHR26p5tz06a3AiDlQgLatmBh8/edit#gid=1146194384) link.
-
-### 🗎 Sweetviz Report
-To view stats of attributes and the values they contain, visit the "**Data - Sweetviz Report**" PDF file in this folder.
+### 🗎 Sweetviz Report, books_sweetviz.html
+To view stats of attributes and the values they contain, visit the "**data_sweetviz**" HTML file in this folder.
