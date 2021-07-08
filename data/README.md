@@ -8,4 +8,4 @@ Number of Columns with English values : <br />
 Number of Columns with Telugu values  : <br /> 
 
 #### Translated, Transliterated Attributes 
-To view a list of all the attributes listed in our dataset and how their Telugu versions have been obtained, please refer to the "Books - Data - Translated, Transliterated Attributes.pdf" PDF file in this folder, or via [this] (https://docs.google.com/document/d/1ShzYVrSgmkvICiYevx8gl2SFb0OIX10ivYOjxXugc-I/edit#) link.
+To view a list of all the attributes listed in our dataset and how their Telugu versions have been obtained, please refer to the "Books - Data - Translated, Transliterated Attributes.pdf" PDF file in this folder, or via [this](https://docs.google.com/document/d/1ShzYVrSgmkvICiYevx8gl2SFb0OIX10ivYOjxXugc-I/edit#) link.
