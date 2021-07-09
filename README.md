@@ -4,7 +4,6 @@ Welcome to the repository of "Books"! Follow the guide below if you'd like to na
 
 You may also check this detailed **report** on the Tewiki Books project [here](https://github.com/indicwiki-iiit/Books/blob/main/Books%20-%20Report.pdf) to know how to navigate through all the files listed here, and to know the multiple technical and other facets of this project.
 
-![Read below for navigation.](navigation.png)
 ## Guide to using these files/implementing/testing
 
 * Download this repository as a ZIP, or clone it to your computer.
@@ -17,7 +16,7 @@ If you'd like to know more about the scripts used to construct the database and 
 To know what the rendered article would look like, before you render it, check out the "Books - Sample Article.pdf" file or [this](https://github.com/indicwiki-iiit/Books/blob/main/Books%20-%20Sample%20Article.pdf) document.
 
 ## Navigational Guide
-
+![Read below for navigation.](navigation.png)
 ### 📁 [data](https://github.com/indicwiki-iiit/Books/tree/main/data)
 Visit this folder to view the following files, or for some trivia on - 
 * The Final database **FINAL-KB.csv** used to generate all the articles in this project
