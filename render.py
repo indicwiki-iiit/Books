@@ -357,6 +357,14 @@ if __name__ == "__main__":
     env = Environment(loader=file_loader)
     template = env.get_template("template.j2")
 
-    # Read csv file and send it to the generate_xml() function
+    # Read csv file
     d = pd.read_csv("data/FINAL-KB.csv")
+
+    # Generating an article for a row from the FINAL-KB.csv
+    data = getData(d.loc[0]) # 0 is the row index here
+    wikitext = template.render(data)
+    # Writing the wikipedia article source code to a file called "ARTICLE.txt"
+    f = open("ARTICLE.txt", "w")
+    f.write(wikitext)
+    f.close()
     generate_xml(d)
