@@ -36,6 +36,9 @@ Visit this folder to find the final version of the template we've used to genera
 ### 🗎 AUTOXML.xml
 This is the final XML File generated, enclosing articles on 6500 books, i.e. spanning over all records of the database.
 
+### 🗎 ARTICLE.txt
+This is the wikipedia article's source code generated for one of the records in our FINAL-KB.csv dataset.
+
 ### 🗎 Books - Report. pdf
 Read this comprehensive report on this project to know more about the technical facets of this project, tools used to overcome issues encountered, some factual details, and a lot more.
 
