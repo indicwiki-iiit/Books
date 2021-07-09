@@ -1,6 +1,6 @@
 ## Raw Files
 
-This folder contains **raw/primitive versions** of the templates and datasets we've generated, and also comprises of a collection of Python files, each serving a different purpose ( scraping from a site, preprocessing attributes, etc. )</ br>
+This folder contains **raw/primitive versions** of the templates and datasets we've generated, and also comprises of a collection of Python files, each serving a different purpose ( scraping from a site, preprocessing attributes, etc. )
 
 ### 📁[raw_code](https://github.com/indicwiki-iiit/Books/tree/main/raw_files/raw_code)
 Visit this folder if you'd like to view/use the code used to scrape the internet to get values of various attributes, preprocess attributes, etc.
