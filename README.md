@@ -36,9 +36,6 @@ Visit this folder to find the final version of the template we've used to genera
 ### 🗎 AUTOXML.xml
 This is the final XML File generated, enclosing articles on 6500 books, i.e. spanning over all records of the database.
 
-### 🗎 Books - Sample Article. pdf
-This is the Sample Article, the reference file we've made for ourselves to construct the code of the jinja template accordingly. This file is exemplary of the many sections in the articles we've generated, all possible randomized sentences, and much more. View this file to get a preview of how the articles look like, on Wikipedia.
-
 ### 🗎 Books - Report. pdf
 Read this comprehensive report on this project to know more about the technical facets of this project, tools used to overcome issues encountered, some factual details, and a lot more.
 
