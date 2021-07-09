@@ -12,7 +12,15 @@ def getData(data):
     """
     template_data = dict()
     if(not pd.isnull(data['WIKIPEDIA_TITLE_TELUGU'])):
-        template_data['WIKIPEDIA_TITLE'] = data['WIKIPEDIA_TITLE_TELUGU']
+        temp = data['WIKIPEDIA_TITLE_TELUGU']
+        temp = temp.replace("'స్", "స్")
+        temp = temp.replace("&", "&amp;")
+        temp = temp.replace("<", "&lt;")
+        temp = temp.replace(">", "&gt;")
+        temp = temp.replace("'", "&apos;")
+        temp = temp.replace('"', "&quot;")
+        template_data['WIKIPEDIA_TITLE'] = temp
+
     else:
         template_data['WIKIPEDIA_TITLE_TELUGU'] = ""
 
