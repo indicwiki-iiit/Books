@@ -367,4 +367,6 @@ if __name__ == "__main__":
     f = open("ARTICLE.txt", "w")
     f.write(wikitext)
     f.close()
+
+    # Finally generate XML for all records
     generate_xml(d)
