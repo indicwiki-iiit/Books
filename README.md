@@ -36,6 +36,9 @@ Visit this folder to find the final version of the template we've used to genera
 ### 🗎 AUTOXML.xml
 This is the final XML File generated, enclosing articles on 6500 books, i.e. spanning over all records of the database.
 
+### 🗎 ARTICLE.txt
+This is the wiki source code(to be placed inside sandbox) for one of the records in the FINAL-KB.csv dataset. If you want to generate the wiki source code for another record, you can do so by replacing the index number of the record in the dataset with the already mentioned index(0 in this case) in the main function of render.py file.
+
 ### 🗎 Books - Report. pdf
 Read this comprehensive report on this project to know more about the technical facets of this project, tools used to overcome issues encountered, some factual details, and a lot more.
 
