@@ -8,6 +8,10 @@ Rows x Columns Stats of the Dataset   : 6500 x 73 <br />
 Number of Columns with English values : 50 <br /> 
 Number of Columns with Telugu values  : 23 <br /> 
 
+#### Generated Articles - Stub (vs) Generic
+Stub Articles, i.e. <5KB : 57
+Generic Articles, i.e >= 5KB : 6443
+
 ## Navigation
 
 ### 🗎 Dataset
