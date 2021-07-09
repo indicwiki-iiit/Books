@@ -16,7 +16,7 @@ If you'd like to know more about the scripts used to construct the database and 
 To know what the rendered article would look like, before you render it, check out the "Books - Sample Article.pdf" file or [this](https://github.com/indicwiki-iiit/Books/blob/main/Books%20-%20Sample%20Article.pdf) document.
 
 ## Navigational Guide
-![Read below for navigation.](r_navigation.png)
+![Read below for navigation.](README_NAV.png)
 ### 📁 [data](https://github.com/indicwiki-iiit/Books/tree/main/data)
 Visit this folder to view the following files, or for some trivia on - 
 * The Final database **FINAL-KB.csv** used to generate all the articles in this project
