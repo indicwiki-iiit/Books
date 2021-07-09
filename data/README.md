@@ -9,7 +9,7 @@ Number of Columns with English values : 50 <br />
 Number of Columns with Telugu values  : 23 <br /> 
 
 #### Generated Articles - Stub (vs) Generic
-Stub Articles, i.e. <5KB : 57
+Stub Articles, i.e. <5KB : 57 <br />
 Generic Articles, i.e >= 5KB : 6443
 
 ## Navigation
