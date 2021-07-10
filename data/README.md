@@ -12,6 +12,10 @@ Number of Columns with Telugu values  : 23 <br />
 Stub Articles, i.e. <5KB : 57 <br />
 Generic Articles, i.e >= 5KB : 6443
 
+The following chart has been plotted based on byte count of all the articles generated.
+
+![Read below for navigation.](stats_byte_count_image.png)
+
 ## Navigation
 
 ### 🗎 Dataset
